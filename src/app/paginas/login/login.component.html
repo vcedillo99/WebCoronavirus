@@ -1,0 +1,22 @@
+<body>
+    <div>
+        <mat-card class="login">
+            <h1>Covid Control</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="enviar(loginForm.value)">
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input formControlName="username" matInput>
+                    <mat-icon matSuffix>person</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input formControlName="password" matInput [type]="verContrasena ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="verContrasena = !verContrasena">
+                        <mat-icon>{{verContrasena ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-flat-button color="accent" type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+            </form>
+        </mat-card>
+    </div>
+</body>

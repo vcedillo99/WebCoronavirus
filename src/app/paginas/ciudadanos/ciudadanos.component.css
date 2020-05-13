@@ -1,0 +1,19 @@
+mat-card{
+    margin: 25px;
+}
+table{
+    width: 100%;
+}
+
+.edit{
+    color: #ffbc26;
+}
+
+mat-card-title{
+    padding-top: 10px;
+}
+
+mat-card-header .mat-flat-button{
+    position: absolute;
+    right: 30px;
+}

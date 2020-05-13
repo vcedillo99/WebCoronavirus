@@ -1,0 +1,37 @@
+<h2 mat-dialog-title> Actualizar Ciudadano </h2>
+<mat-dialog-content>
+    <form [formGroup]="modalForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>DNI</mat-label>
+            <input matInput >
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Celular</mat-label>
+            <input matInput >
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Nacionalidad</mat-label>
+            <mat-select name="nacion">
+              <mat-option *ngFor="let nacion of nacion" [value]="nacion.value">
+                {{nacion.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Infección</mat-label>
+            <mat-select name="infeccion">
+              <mat-option *ngFor="let infeccion of infeccion" [value]="infeccion.value">
+                {{infeccion.viewValue}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-flat-button color="warn" mat-dialog-close> Cancelar</button>
+    <button mat-flat-button color="accent" mat-dialog-close> Guardar </button>
+</mat-dialog-actions>
